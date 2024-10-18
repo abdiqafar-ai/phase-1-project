@@ -102,6 +102,21 @@ form {
     text-decoration: none;
 }
 
+.delete-button {
+    background-color: #FF5733; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.delete-button:hover {
+    background-color: #C70039; 
+}
+
 #show-more-button {
     background-color: #007B5F; 
     color: #fff;
@@ -111,12 +126,12 @@ form {
     cursor: pointer;
     display: block; 
     margin: 20px auto;
+    display: none;
 }
 
 #show-more-button:hover {
     background-color: #005B43; 
 }
-
 
 .dark-mode {
     background-color: #2C2C2C; 
@@ -162,7 +177,9 @@ form {
         font-size: 1.5em;
     }
 
-    #search-button, #toggle-button, #show-more-button {
+    #search-button,
+    #toggle-button,
+    #show-more-button {
         font-size: 14px;
     }
 }

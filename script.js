@@ -16,7 +16,7 @@ async function searchImages() {
     const response = await fetch(url);
     const data = await response.json();
     const results = data.results;
-
+           
     if (page === 1) {
         searchResults.textContent = "";
     }
@@ -34,8 +34,19 @@ async function searchImages() {
         imageLink.target = "_blank";
         imageLink.textContent = result.alt_description || "Image";
 
+        
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.classList.add("delete-button");
+        
+        
+        deleteButton.addEventListener("click", () => {
+            searchResults.removeChild(imageWrapper);
+        });
+
         imageWrapper.appendChild(image);
         imageWrapper.appendChild(imageLink);
+        imageWrapper.appendChild(deleteButton);
         searchResults.appendChild(imageWrapper);
     });
 
@@ -57,7 +68,6 @@ showMore.addEventListener("click", (event) => {
     event.preventDefault();
     searchImages(); 
 });
-
 
 toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');

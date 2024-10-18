@@ -11,18 +11,19 @@ This project aims to demonstrate the integration of HTML, CSS, and JavaScript wi
 - **Image Grid Display**: Images are displayed in a responsive grid format for easy viewing.
 - **Image Click Links**: Clicking an image opens it in a new tab for a larger view.
 - **Load More Functionality**: Users can fetch additional images with a simple button click.
-- **Loading Indicator**: A loading spinner displays while images are being fetched.
+- **Delete Option**: Users can remove images from the display.
+- **Dark Mode**: A toggle button to switch between light and dark themes.
+- **Loading Indicator**: A spinner can be displayed while images are being fetched (to be implemented).
 
 ## Technologies Used
 - **HTML5**: Structure of the application.
 - **CSS3**: Styling the layout for a modern look.
-- **JavaScript (ES6+)**: Functionality and API interactions.
+- **JavaScript**: Functionality and API interactions.
 - **Unsplash API**: Provides access to a vast library of high-quality images.
 
 ## Getting Started
 
 ### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, etc.)
+- A modern web browser (Chrome,etc).
 - Basic understanding of HTML, CSS, and JavaScript.
-
 
