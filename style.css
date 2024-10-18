@@ -24,7 +24,6 @@ form {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-    flex-wrap: wrap;
 }
 
 #Search-input {
@@ -35,10 +34,9 @@ form {
     border-radius: 5px;
     font-size: 16px;
     margin-right: 10px;
-    margin-bottom: 10px;
 }
 
-#search-button {
+button {
     padding: 10px 20px;
     background-color: #007B5F; 
     border: none;
@@ -46,23 +44,17 @@ form {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin: 0 5px;
 }
 
-#search-button:hover {
+button:hover {
     background-color: #005B43; 
 }
 
-#toggle-button {
-    background-color: #007B5F;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 20px auto;
-    display: block;
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .search-result {
@@ -86,11 +78,6 @@ form {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out; 
-}
-
-.search-card img:hover {
-    transform: scale(1.05); 
 }
 
 .search-card a {
@@ -102,35 +89,16 @@ form {
     text-decoration: none;
 }
 
+.edit-button {
+    background-color: #FFC107; /* Yellow color for edit */
+}
+
 .delete-button {
-    background-color: #FF5733; 
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
+    background-color: #FF5733; /* Red color for delete */
 }
 
-.delete-button:hover {
-    background-color: #C70039; 
-}
-
-#show-more-button {
-    background-color: #007B5F; 
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block; 
-    margin: 20px auto;
-    display: none;
-}
-
-#show-more-button:hover {
-    background-color: #005B43; 
+.edit-button:hover, .delete-button:hover {
+    opacity: 0.8; 
 }
 
 .dark-mode {
@@ -142,12 +110,6 @@ form {
     background-color: #555;
     color: #E0F7FA;
     border: 1px solid #777;
-}
-
-.dark-mode #search-button,
-.dark-mode #toggle-button,
-.dark-mode #show-more-button {
-    background-color: #1DB954; 
 }
 
 @media (max-width: 768px) {
@@ -177,9 +139,7 @@ form {
         font-size: 1.5em;
     }
 
-    #search-button,
-    #toggle-button,
-    #show-more-button {
+    button {
         font-size: 14px;
     }
 }
